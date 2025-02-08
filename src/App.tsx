@@ -20,16 +20,19 @@ function App() {
         </div>
       </header>
 
-      <main className="flex-1 overflow-auto p-6 space-y-6 bg-gray-50">
-        <Map onParcelClick={setSelectedParcel} />
-        <ParcelTable 
+      <main className="flex-1 overflow-auto p-6 space-y-6 bg-gray-50" id='main-content'>
+
+        <div id='container-map'><Map onParcelClick={setSelectedParcel} /></div>
+        <div id='container-table'><ParcelTable
           parcels={parcels}
           onParcelClick={setSelectedParcel}
-        />
-        <ParcelModal
+        /></div>
+        <div id='container-modal'>
+           <ParcelModal
           parcel={selectedParcel}
           onClose={() => setSelectedParcel(null)}
         />
+        </div>
       </main>
     </div>
   );

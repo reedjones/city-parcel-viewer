@@ -6,3 +6,16 @@
   width: 100%;
   height: 100%;
 }
+
+#main-content {
+  z-index:0;
+}
+#container-map {
+  z-index:1;
+}
+#container-modal {
+  z-index:3;
+}
+#container-table {
+  z-index:2;
+}
